@@ -7,7 +7,8 @@ const Inputs = forwardRef(function Inputs({ label, isTextArea, ...probs }, ref) 
             {isTextArea ?
                 (<textarea ref={ref} className={inputStyle} {...probs}></textarea>
                 ) : (
-                    <input ref={ref} className={inputStyle} {...probs}></input>)}
+                    <input ref={ref} className={inputStyle} {...probs}></input>)
+            }
         </p>
     );
 
