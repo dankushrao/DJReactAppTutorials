@@ -11,7 +11,7 @@ export default function projectsidebars({ onStartNewProject, projectObj }) {
                 {
                     projectObj.map(project =>
                         <li key={project.id}>
-                            <button className='w-full bg-stone-400 text-stone-200 text-left px-2 py-1 rounded-sm my-1 hover:bg-stone-600'>
+                            <button className=' mb-8 font-bold uppercase text-left px-2 py-1 rounded-sm my-5 hover:bg-stone-600'>
                                 {project.title}
                             </button>
                         </li>
