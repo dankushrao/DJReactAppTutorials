@@ -1,7 +1,7 @@
 import { useState } from "react";
 import Projectsidebars from "./components/projectsidebars.jsx";
-import NewProject from "./components/NewProject.jsx";
 import NoProjectFound from "./components/NoProjectSelected.jsx";
+import NewProject from "./components/newProject.jsx";
 function App() {
   const [projectState, setProjectState] = useState({
     selectedProjectID: undefined,
@@ -30,9 +30,11 @@ function App() {
     })
   };
 
+  console.log(projectState);
+
   let content;
   if (projectState.selectedProjectID === null) {
-    content = <NewProject onAdd={handleAddProjects}/>
+    content = <NewProject onAdd={handleAddProjects} />
   } else if (projectState.selectedProjectID === undefined) {
     content = <NoProjectFound onStartNewProject={handleStartNewProjects} />
   }
